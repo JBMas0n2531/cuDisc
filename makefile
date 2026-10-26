@@ -37,14 +37,7 @@ else
 	# CUDA_HOME = /uollinapps/v2/24-25/uol/packages/el8/linux-rocky8-x86_64_v3/gcc-8.5.0/cuda-12.0.1-bdbrsixhxmrfs5m24rdkgykcymiwyfwt
     GPU_COMPILER = nvcc
 
-	ARCH = --generate-code arch=compute_60,code=sm_60 \
-       --generate-code arch=compute_61,code=sm_61 \
-       --generate-code arch=compute_62,code=sm_62 \
-       --generate-code arch=compute_70,code=sm_70 \
-       --generate-code arch=compute_72,code=sm_72 \
-       --generate-code arch=compute_75,code=sm_75 \
-       --generate-code arch=compute_80,code=sm_80 \
-       --generate-code arch=compute_86,code=sm_86
+	ARCH = --generate-code arch=compute_90,code=sm_90
 
     GPU_FLAGS    = -O3 -g --std=c++17 -Wno-deprecated-gpu-targets $(ARCH) -DOPAC_DIR=\"$(OPAC_DIR)\" -Wno-deprecated-declarations
     GPU_INCLUDE  = -I./$(HEADER_DIR) -I$(CUDA_HOME)/include
